@@ -1,5 +1,5 @@
-import axios from 'axios';
-import Team from '../models/Team.js';
+import axios from "axios";
+import Team from "../models/Team.js";
 
 // Função para buscar dados da API OpenF1 e atualizar a equipe com base no nome
 const fetchAndUpdateTeamByName = async (teamName) => {
@@ -16,34 +16,39 @@ const fetchAndUpdateTeamByName = async (teamName) => {
       throw new Error("Pilotos não encontrados na API.");
     }
 
-    // Obtém a cor da equipe a partir do primeiro piloto (presumindo que todos os pilotos têm a mesma cor de equipe)
-    const teamColour = driversData[0].team_colour;
-    
-    // Verifica se a equipe já existe no banco de dados
-    let team = await Team.findOne({ name: teamName });
-    if (team) {
-      // Atualiza a equipe existente com os pilotos e a cor da equipe
-      team.drivers = driversData.map(driver => ({
+    // Caminho das logos e bandeiras
+    const teamLogoUrl = `/static/teams/${teamName}.png`;  // Logo da equipe
+    const teamColour = "#FF0000"; // Defina a cor da equipe conforme necessário
+    const updatedDrivers = driversData.map(driver => {
+      const flagUrl = `/static/flags/${driver.country_code}.jpg`;  // Bandeira do piloto com extensão .jpg
+      console.log(`Flag URL: ${flagUrl}`);  // Adiciona log para depuração
+
+      return {
         name: driver.full_name,
         nationality: driver.country_code,
         number: driver.driver_number,
         headshotUrl: driver.headshot_url,
-      }));
-      team.teamColour = teamColour; // Atualiza a cor da equipe
+        flagUrl: flagUrl,
+      };
+    });
+
+    // Cria ou atualiza a equipe com os dados dos pilotos e a logo da scuderia
+    let team = await Team.findOne({ name: teamName });
+    if (team) {
+      team.drivers = updatedDrivers;
+      team.teamLogoUrl = teamLogoUrl;
+      team.teamColour = teamColour;
       await team.save();
+      console.log(`Equipe ${teamName} atualizada.`);
     } else {
-      // Cria uma nova equipe com os pilotos e a cor da equipe
       team = new Team({
         name: teamName,
-        teamColour: teamColour, // Adiciona a cor da equipe
-        drivers: driversData.map(driver => ({
-          name: driver.full_name,
-          nationality: driver.country_code,
-          number: driver.driver_number,
-          headshotUrl: driver.headshot_url,
-        })),
+        teamLogoUrl: teamLogoUrl,  // Adiciona a logo da equipe
+        teamColour: teamColour,    // Adiciona a cor da equipe
+        drivers: updatedDrivers,
       });
       await team.save();
+      console.log(`Equipe ${teamName} criada.`);
     }
   } catch (error) {
     console.error("Erro ao buscar e atualizar a equipe:", error);
