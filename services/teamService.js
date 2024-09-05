@@ -25,12 +25,14 @@ const fetchAndUpdateTeamByName = async (teamName) => {
         nationality: driver.country_code,
         number: driver.driver_number,
         headshotUrl: driver.headshot_url,
+        team_colour: driver.team_colour
       }));
       await team.save();
     } else {
       // Cria uma nova equipe com os pilotos
       team = new Team({
         name: teamName,
+        team_colour : team_colour,
         drivers: driversData.map(driver => ({
           name: driver.full_name,
           nationality: driver.country_code,
