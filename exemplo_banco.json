@@ -1,0 +1,229 @@
+{
+	"teams": [
+		{
+			"_id": "66d9c7a64832b4b8b6d99f13",
+			"name": "Mercedes",
+			"teamColour": "6CD3BF",
+			"teamLogoUrl": "https://www.formula1.com/content/dam/fom-website/teams/mercedes_logo.png",
+			"drivers": [
+				{
+					"name": "Lewis HAMILTON",
+					"nationality": "GBR",
+					"number": 44,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/1col/image.png",
+					"flagUrl": "https://flagcdn.com/w320/gbr.png",
+					"_id": "66d9c7a64832b4b8b6d99f14"
+				},
+				{
+					"name": "George RUSSELL",
+					"nationality": "GBR",
+					"number": 63,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/G/GEORUS01_George_Russell/georus01.png.transform/1col/image.png",
+					"flagUrl": "https://flagcdn.com/w320/gbr.png",
+					"_id": "66d9c7a64832b4b8b6d99f15"
+				}
+			],
+			"__v": 0
+		},
+		{
+			"_id": "66da007af3dc0263c30d7366",
+			"name": "Red Bull Racing",
+			"teamColour": "#FF0000",
+			"teamLogoUrl": "/static/teams/Red Bull Racing.png",
+			"drivers": [
+				{
+					"name": "Max VERSTAPPEN",
+					"nationality": "NED",
+					"number": 1,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/NED.jpg",
+					"_id": "66da007af3dc0263c30d7367"
+				},
+				{
+					"name": "Sergio PEREZ",
+					"nationality": "MEX",
+					"number": 11,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/S/SERPER01_Sergio_Perez/serper01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/MEX.jpg",
+					"_id": "66da007af3dc0263c30d7368"
+				}
+			],
+			"__v": 0
+		},
+		{
+			"_id": "66da011172033299fcb8507d",
+			"name": "Aston Martin",
+			"teamColour": "#FF0000",
+			"teamLogoUrl": "/static/teams/Aston Martin.png",
+			"drivers": [
+				{
+					"name": "Fernando ALONSO",
+					"nationality": "ESP",
+					"number": 14,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/F/FERALO01_Fernando_Alonso/feralo01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/ESP.jpg",
+					"_id": "66da011172033299fcb8507e"
+				},
+				{
+					"name": "Lance STROLL",
+					"nationality": "CAN",
+					"number": 18,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/L/LANSTR01_Lance_Stroll/lanstr01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/CAN.jpg",
+					"_id": "66da011172033299fcb8507f"
+				}
+			],
+			"__v": 0
+		},
+		{
+			"_id": "66da013472033299fcb85085",
+			"name": "Alpine",
+			"teamColour": "#FF0000",
+			"teamLogoUrl": "/static/teams/Alpine.png",
+			"drivers": [
+				{
+					"name": "Pierre GASLY",
+					"nationality": "FRA",
+					"number": 10,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/P/PIEGAS01_Pierre_Gasly/piegas01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/FRA.jpg",
+					"_id": "66da013472033299fcb85086"
+				},
+				{
+					"name": "Esteban OCON",
+					"nationality": "FRA",
+					"number": 31,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/E/ESTOCO01_Esteban_Ocon/estoco01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/FRA.jpg",
+					"_id": "66da013472033299fcb85087"
+				}
+			],
+			"__v": 0
+		},
+		{
+			"_id": "66da018072033299fcb8508e",
+			"name": "McLaren",
+			"teamColour": "#FF0000",
+			"teamLogoUrl": "/static/teams/McLaren.png",
+			"drivers": [
+				{
+					"name": "Lando NORRIS",
+					"nationality": "GBR",
+					"number": 4,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/L/LANNOR01_Lando_Norris/lannor01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/GBR.jpg",
+					"_id": "66da018072033299fcb8508f"
+				},
+				{
+					"name": "Oscar PIASTRI",
+					"nationality": "AUS",
+					"number": 81,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/O/OSCPIA01_Oscar_Piastri/oscpia01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/AUS.jpg",
+					"_id": "66da018072033299fcb85090"
+				}
+			],
+			"__v": 0
+		},
+		{
+			"_id": "66da019e72033299fcb85096",
+			"name": "Williams",
+			"teamColour": "#FF0000",
+			"teamLogoUrl": "/static/teams/Williams.png",
+			"drivers": [
+				{
+					"name": "Logan SARGEANT",
+					"nationality": "USA",
+					"number": 2,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/L/LOGSAR01_Logan_Sargeant/logsar01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/USA.jpg",
+					"_id": "66da019e72033299fcb85097"
+				},
+				{
+					"name": "Alexander ALBON",
+					"nationality": "THA",
+					"number": 23,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/A/ALEALB01_Alexander_Albon/alealb01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/THA.jpg",
+					"_id": "66da019e72033299fcb85098"
+				}
+			],
+			"__v": 0
+		},
+		{
+			"_id": "66da024672033299fcb850a0",
+			"name": "Haas F1 Team",
+			"teamColour": "#FF0000",
+			"teamLogoUrl": "/static/teams/Haas F1 Team.png",
+			"drivers": [
+				{
+					"name": "Kevin MAGNUSSEN",
+					"nationality": "DEN",
+					"number": 20,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/K/KEVMAG01_Kevin_Magnussen/kevmag01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/DEN.jpg",
+					"_id": "66da024672033299fcb850a1"
+				},
+				{
+					"name": "Nico HULKENBERG",
+					"nationality": "GER",
+					"number": 27,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/N/NICHUL01_Nico_Hulkenberg/nichul01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/GER.jpg",
+					"_id": "66da024672033299fcb850a2"
+				}
+			],
+			"__v": 0
+		},
+		{
+			"_id": "66da02a472033299fcb850a9",
+			"name": "Alfa Romeo",
+			"teamColour": "#FF0000",
+			"teamLogoUrl": "/static/teams/Alfa Romeo.png",
+			"drivers": [
+				{
+					"name": "ZHOU Guanyu",
+					"nationality": "CHN",
+					"number": 24,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/G/GUAZHO01_Guanyu_Zhou/guazho01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/CHN.jpg",
+					"_id": "66da02a472033299fcb850aa"
+				},
+				{
+					"name": "Valtteri BOTTAS",
+					"nationality": "FIN",
+					"number": 77,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/V/VALBOT01_Valtteri_Bottas/valbot01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/FIN.jpg",
+					"_id": "66da02a472033299fcb850ab"
+				}
+			],
+			"__v": 0
+		},
+		{
+			"_id": "66da02ee72033299fcb850b1",
+			"name": "AlphaTauri",
+			"teamColour": "#FF0000",
+			"teamLogoUrl": "/static/teams/AlphaTauri.png",
+			"drivers": [
+				{
+					"name": "Yuki TSUNODA",
+					"nationality": "JPN",
+					"number": 22,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/Y/YUKTSU01_Yuki_Tsunoda/yuktsu01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/JPN.jpg",
+					"_id": "66da02ee72033299fcb850b2"
+				},
+				{
+					"name": "Liam LAWSON",
+					"nationality": "NZL",
+					"number": 40,
+					"headshotUrl": null,
+					"flagUrl": "/static/flags/NZL.jpg",
+					"_id": "66da02ee72033299fcb850b3"
+				}
+			],
+			"__v": 0
+		}
+	]
+}
