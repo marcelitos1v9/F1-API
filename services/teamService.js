@@ -1,5 +1,5 @@
-import axios from "axios";
-import Team from "../models/Team.js";
+import axios from 'axios';
+import Team from '../models/Team.js';
 
 // Função para buscar dados da API OpenF1 e atualizar a equipe com base no nome
 const fetchAndUpdateTeamByName = async (teamName) => {
@@ -16,23 +16,26 @@ const fetchAndUpdateTeamByName = async (teamName) => {
       throw new Error("Pilotos não encontrados na API.");
     }
 
-    // Cria ou atualiza a equipe com os dados dos pilotos
+    // Obtém a cor da equipe a partir do primeiro piloto (presumindo que todos os pilotos têm a mesma cor de equipe)
+    const teamColour = driversData[0].team_colour;
+    
+    // Verifica se a equipe já existe no banco de dados
     let team = await Team.findOne({ name: teamName });
     if (team) {
-      // Atualiza a equipe existente com os pilotos
+      // Atualiza a equipe existente com os pilotos e a cor da equipe
       team.drivers = driversData.map(driver => ({
         name: driver.full_name,
         nationality: driver.country_code,
         number: driver.driver_number,
         headshotUrl: driver.headshot_url,
-        team_colour: driver.team_colour
       }));
+      team.teamColour = teamColour; // Atualiza a cor da equipe
       await team.save();
     } else {
-      // Cria uma nova equipe com os pilotos
+      // Cria uma nova equipe com os pilotos e a cor da equipe
       team = new Team({
         name: teamName,
-        team_colour : team_colour,
+        teamColour: teamColour, // Adiciona a cor da equipe
         drivers: driversData.map(driver => ({
           name: driver.full_name,
           nationality: driver.country_code,

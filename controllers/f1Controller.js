@@ -21,8 +21,10 @@ const createOrUpdateTeamByName = async (req, res) => {
       return res.status(400).json({ error: "Nome da equipe é obrigatório." });
     }
 
+    // Busca e atualiza a equipe com base no nome
     await teamService.fetchAndUpdateTeamByName(name);
 
+    // Recupera a equipe atualizada do banco de dados
     const team = await Team.findOne({ name });
     if (!team) {
       return res.status(404).json({ error: "Equipe não encontrada no banco de dados." });
@@ -51,10 +53,10 @@ const deleteTeam = async (req, res) => {
 const updateTeam = async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, foundationYear, base } = req.body;
+    const { name, foundationYear, base, teamColour } = req.body;
     const updatedTeam = await Team.findByIdAndUpdate(
       id,
-      { name, foundationYear, base },
+      { name, foundationYear, base, teamColour }, // Incluindo a cor da equipe na atualização
       { new: true }
     );
     if (!updatedTeam) {

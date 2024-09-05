@@ -13,6 +13,7 @@ const teamSchema = new mongoose.Schema({
   name: String,
   foundationYear: Number,
   base: String,
+  teamColour: String, // Adicionado para a cor da equipe
   drivers: [driverSchema], // Array de pilotos aninhados
 });
 
