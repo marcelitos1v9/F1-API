@@ -1,7 +1,8 @@
 import express from "express";
 import path from "path";
 import url from "url";
-import mongoose from "mongoose";
+//import mongoose from "mongoose";
+import mongoose from "./config/connect_db.js"
 import f1Routes from "./routes/f1Routes.js";
 
 // Obtendo o diretório atual
@@ -18,13 +19,13 @@ app.use(express.json());
 app.use('/static', express.static(path.join(__dirname, 'global')));
 
 // Iniciando a conexão com o MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/api-f1")
-  .then(() => {
-    console.log("Conectado ao MongoDB");
-  })
-  .catch((error) => {
-    console.error("Erro ao conectar ao MongoDB:", error);
-  });
+// mongoose.connect(process.env.MONGO_URI)
+//   .then(() => {
+//     console.log("Conectado ao MongoDB");
+//   })
+//   .catch((error) => {
+//     console.error("Erro ao conectar ao MongoDB:", error);
+//   });
 
 // Rotas
 app.use("/", f1Routes);
