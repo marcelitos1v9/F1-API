@@ -1,151 +1,151 @@
-# Exemplo de documentação de API
+# Documentação API.
 ![NPM](https://img.shields.io/npm/l/react)
 
-# API The Games
-Esta API é utilizada para gerenciar um catálogo de jogos, permitindo operações de CRUD (criar, ler, atualizar e deletar) sobre jogos.
+# API F1
+Esta API sobre Fórmula 1 é utilizada para gerenciar informações de corredores e suas respectivas equipes.
 
 ## Endpoints
-### - GET /games
-Esse endpoint é responsável por retornar a listagem de todos os jogos cadastrados no banco de dados.
+### - GET /teams
+Esse endpoint é responsável por retornar a listagem de todas as equipes.
 
 #### Parâmetros:
 Nenhum
 
 #### Respostas:
-##### OK! 200
-Caso essa resposta aconteça, você vai receber a listagem de todos os jogos.
+##### OK 200
+Caso essa resposta aconteça, você vai receber a listagem das equipes.
 
 Exemplo de resposta:
 
 ```
 {
-    "games": [
-        {
-            "title": "Call of Duty MW",
-            "year": 2019,
-            "price": 60,
-            "descriptions": [
-                {
-                    "genre": "Action",
-                    "platform": "PC",
-                    "rating": "M"
-                }
-            ]
-        },
-        {
-            "title": "Sea of Thieves",
-            "year": 2018,
-            "price": 40,
-            "descriptions": [
-                {
-                    "genre": "Adventure",
-                    "platform": "Xbox",
-                    "rating": "T"
-                }
-            ]
-        }
-    ]
+	"teams": [
+		{
+			"_id": "66dfa97b3553a3e422997a93",
+			"name": "Mercedes",
+			"teamColour": "#FF0000",
+			"teamLogoUrl": "/static/teams/Mercedes.png",
+			"drivers": [
+				{
+					"name": "Lewis HAMILTON",
+					"nationality": "GBR",
+					"number": 44,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/GBR.jpg",
+					"_id": "66dfa97b3553a3e422997a94"
+				},
+				{
+					"name": "George RUSSELL",
+					"nationality": "GBR",
+					"number": 63,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/G/GEORUS01_George_Russell/georus01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/GBR.jpg",
+					"_id": "66dfa97b3553a3e422997a95"
+				}
+			],
+			"__v": 0
+		}
+	]
 }
 ```
 
-##### Erro Interno do Servidor! 500
+##### Internal Server Error 500
 Caso essa resposta aconteça, significa que ocorreu um erro interno no servidor. Motivos podem incluir falhas na comunicação com o banco de dados.
 
 Exemplo de resposta:
 
 ```
 {
-    "err": "Erro interno do servidor!"
+    "err": "Erro interno no servidor."
 }
 ```
 
-### - POST /game
-Esse endpoint é responsável por cadastrar um novo jogo no banco de dados.
+### - POST /team
+Esse endpoint é responsável por cadastrar uma nova equipe no banco.
 
 #### Parâmetros:
-title: Título do jogo.<br>
-year: Ano de lançamento do jogo.<br>
-price: Preço do jogo.<br>
-descriptions: Descrições adicionais sobre o jogo (opcional).
+name: Nome da equipe.<br>
+teamColour: Cor da equipe em hexadecimal.<br>
+teamLogoUrl: Link da logo da equipe    .<br>
+drivers: Informações sobre os pilotos da equipe.
 
 Exemplo de requisição:
 
 ```
 {
-    "title": "Minecraft",
-    "year": 2012,
-    "price": 20,
-    "descriptions": [
-        {
-            "genre": "Sandbox",
-            "platform": "PC",
-            "rating": "E"
-        }
-    ]
-}
+			"name": "Red Bull Racing",
+			"teamColour": "#FF0000",
+			"teamLogoUrl": "/static/teams/Red Bull Racing.png",
+			"drivers": [
+				{
+					"name": "Max VERSTAPPEN",
+					"nationality": "NED",
+					"number": 1,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/NED.jpg",
+					"_id": "66da007af3dc0263c30d7367"
+				},
+				{
+					"name": "Sergio PEREZ",
+					"nationality": "MEX",
+					"number": 11,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/S/SERPER01_Sergio_Perez/serper01.png.transform/1col/image.png",
+					"flagUrl": "/static/flags/MEX.jpg",
+					"_id": "66da007af3dc0263c30d7368"
+				}
+			]
 ```
 
 #### Respostas:
-##### Criado! 201
-Caso essa resposta aconteça, o novo jogo foi criado com sucesso.
+##### OK 200
+Caso essa resposta aconteça, uma nova equipe foi cadastrada com sucesso.
 
 Exemplo de resposta: Nenhum conteúdo retornado.
 
-##### Erro Interno do Servidor! 500
+##### Internal Server Error 500
 Caso essa resposta aconteça, significa que ocorreu um erro interno no servidor.
 
 Exemplo de resposta:
 
 ```
 {
-    "err": "Erro interno do servidor!"
+    "err": "Erro interno no servidor."
 }
 ```
 
 
-### - DELETE /game/
-Esse endpoint é responsável por deletar um jogo específico pelo seu ID.
+### - DELETE /team/
+Esse endpoint é responsável por deletar uma equipe específica através de seu respectivo ID.
 
 #### Parâmetros:
-id: ID do jogo a ser deletado.
+id: ID da equipe a ser deletada.
 
 #### Respostas:
-##### Sem Conteúdo! 204
-Caso essa resposta aconteça, o jogo foi deletado com sucesso e não há conteúdo para retornar ao cliente.
+##### No Content 204
+Caso essa resposta aconteça, a equipe foi deletada com sucesso e não há nada para retornar ao usuário.
 
-Exemplo de resposta: Nenhum conteúdo retornado.
+Exemplo de resposta: No body returned for response.
 
-##### Requisição Inválida! 400
-Caso essa resposta aconteça, significa que o ID fornecido é inválido.
-
-Exemplo de resposta:
-
-```
-{
-    "err": "ID inválido!"
-}
-```
-
-##### Erro Interno do Servidor! 500
+##### Internal Server Error 500
 Caso essa resposta aconteça, significa que ocorreu um erro interno no servidor.
 
 Exemplo de resposta:
 
 ```
 {
-    "err": "Erro interno do servidor!"
+    "err": "Erro interno no servidor."
 }
 ```
 
-### - PUT /game/
-Esse endpoint é responsável por atualizar as informações de um jogo específico pelo seu ID.
+### - PUT /team/
+Esse endpoint é responsável por atualizar as informações de uma equipe específica pelo seu ID.
 
 #### Parâmetros:
-id: ID do jogo a ser atualizado.<br>
-title: Título do jogo (opcional).<br>
-year: Ano de lançamento do jogo (opcional).<br>
-price: Preço do jogo (opcional).<br>
-descriptions: Descrições adicionais sobre o jogo (opcional).<br>
+id: ID da equipe a ser atualizada.<br>
+name: Nome da equipe.<br>
+foundationYear: Ano de fundação da equipe.<br>
+base: .<br>
+teamColour: Cor da equipe em hexadecimal.<br>
 
 Exemplo de requisição:
 
