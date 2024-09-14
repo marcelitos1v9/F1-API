@@ -64,36 +64,15 @@ Exemplo de resposta:
 Esse endpoint é responsável por cadastrar uma nova equipe no banco.
 
 #### Parâmetros:
-name: Nome da equipe.<br>
-teamColour: Cor da equipe em hexadecimal.<br>
-teamLogoUrl: Link da logo da equipe    .<br>
-drivers: Informações sobre os pilotos da equipe.
+name: Nome da equipe<br>
+A partir disso ocorre a chamada de uma API externa e o resultado é tratado, remapeado e cadastrado no Banco de Dados.
 
 Exemplo de requisição:
 
 ```
 {
-			"name": "Red Bull Racing",
-			"teamColour": "#FF0000",
-			"teamLogoUrl": "/static/teams/Red Bull Racing.png",
-			"drivers": [
-				{
-					"name": "Max VERSTAPPEN",
-					"nationality": "NED",
-					"number": 1,
-					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/1col/image.png",
-					"flagUrl": "/static/flags/NED.jpg",
-					"_id": "66da007af3dc0263c30d7367"
-				},
-				{
-					"name": "Sergio PEREZ",
-					"nationality": "MEX",
-					"number": 11,
-					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/S/SERPER01_Sergio_Perez/serper01.png.transform/1col/image.png",
-					"flagUrl": "/static/flags/MEX.jpg",
-					"_id": "66da007af3dc0263c30d7368"
-				}
-			]
+   "name": "Red Bull Racing"
+}
 ```
 
 #### Respostas:
