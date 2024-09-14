@@ -261,7 +261,7 @@ Exemplo de resposta:
 }
 ```
 
-##### Não Encontrado! 404
+##### Não Encontrado 404
 Caso essa resposta aconteça, significa que o a equipe com o ID fornecido não foi encontrado.
 
 Exemplo de resposta:
