@@ -65,6 +65,7 @@ Esse endpoint é responsável por cadastrar uma nova equipe no banco.
 
 #### Parâmetros:
 name: Nome da equipe<br>
+
 A partir disso ocorre a chamada de uma API externa e o resultado é tratado, remapeado e cadastrado no Banco de Dados.
 
 Exemplo de requisição:
