@@ -2,7 +2,7 @@
 ![NPM](https://img.shields.io/npm/l/react)
 
 # API F1
-Esta API sobre Fórmula 1 é utilizada para gerenciar informações de corredores e suas respectivas equipes.
+Esta API sobre Fórmula 1 é utilizada para gerenciar informações das equipes de corridas.
 
 ## Endpoints
 ### - GET /teams
@@ -56,7 +56,7 @@ Exemplo de resposta:
 
 ```
 {
-    "err": "Erro interno no servidor."
+    "error": "Erro interno no servidor."
 }
 ```
 
@@ -109,7 +109,7 @@ Exemplo de resposta:
 
 ```
 {
-    "err": "Erro interno no servidor."
+    "error": "Erro interno no servidor."
 }
 ```
 
@@ -133,7 +133,7 @@ Exemplo de resposta:
 
 ```
 {
-    "err": "Erro interno no servidor."
+    "error": "Erro interno no servidor."
 }
 ```
 
@@ -151,122 +151,134 @@ Exemplo de requisição:
 
 ```
 {
-    "title": "Minecraft Updated",
-    "year": 2013,
-    "price": 25,
-    "descriptions": [
-        {
-            "genre": "Sandbox",
-            "platform": "PC",
-            "rating": "E"
-        }
-    ]
+  "name": "Red Bull Racing",
+  "foundationYear": 2005,
+  "base": "Milton Keynes",
+  "teamColour": "#1E41FF"
 }
+
 ```
 
 #### Respostas:
-##### OK! 200
-Caso essa resposta aconteça, as informações do jogo foram atualizadas com sucesso.
+##### OK 200
+Caso essa resposta aconteça, a equipe será atualizada com sucesso e os dados atualizados serão retornados.
 
 Exemplo de resposta:
 
 ```
 {
-    "game": {
-        "title": "Minecraft Updated",
-        "year": 2013,
-        "price": 25,
-        "descriptions": [
-            {
-                "genre": "Sandbox",
-                "platform": "PC",
-                "rating": "E"
-            }
-        ]
-    }
+	"team": {
+		"_id": "66e2348f1f24fbf46aa4e3d7",
+		"name": "Red Bull Racing",
+		"teamColour": "#1E41FF",
+		"teamLogoUrl": "/static/teams/Red Bull Racing.png",
+		"drivers": [
+			{
+				"name": "Max VERSTAPPEN",
+				"nationality": "NED",
+				"number": 1,
+				"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/1col/image.png",
+				"flagUrl": "/static/flags/NED.jpg",
+				"_id": "66e2348f1f24fbf46aa4e3d8"
+			},
+			{
+				"name": "Sergio PEREZ",
+				"nationality": "MEX",
+				"number": 11,
+				"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/S/SERPER01_Sergio_Perez/serper01.png.transform/1col/image.png",
+				"flagUrl": "/static/flags/MEX.jpg",
+				"_id": "66e2348f1f24fbf46aa4e3d9"
+			}
+		],
+		"__v": 0,
+		"base": "Milton Keynes",
+		"foundationYear": 2005
+	}
 }
 ```
 
-##### Requisição Inválida! 400
-Caso essa resposta aconteça, significa que o ID fornecido é inválido ou a requisição contém dados malformados.
+##### Not Found 404
+Caso essa resposta aconteça, significa que a equipe com o id fornecido não foi encontrada.
 
 Exemplo de resposta:
 
 ```
 {
-    "err": "ID inválido ou dados malformados!"
+  "error": "Equipe não encontrada."
 }
 ```
 
-##### Erro Interno do Servidor! 500
+##### Internal Server Error 500
 Caso essa resposta aconteça, significa que ocorreu um erro interno no servidor.
 
 Exemplo de resposta:
 
 ```
 {
-    "err": "Erro interno do servidor!"
+    "error": "Erro interno do servidor!"
 }
 ```
 
-### - GET /game/
-Esse endpoint é responsável por retornar as informações de um jogo específico pelo seu ID.
+### - GET /team/
+Esse endpoint é responsável por retornar as informações de uma equipe específica.
 
 #### Parâmetros:
-id: ID do jogo a ser consultado.
+id: ID da equipe a ser consultada.
 
 #### Respostas:
-##### OK! 200
-Caso essa resposta aconteça, você vai receber as informações do jogo solicitado.
+##### OK 200
+Caso essa resposta aconteça, você vai receber as informações da equipe consultada.
 
 Exemplo de resposta:
 
 ```
 {
-    "game": {
-        "title": "Minecraft",
-        "year": 2012,
-        "price": 20,
-        "descriptions": [
-            {
-                "genre": "Sandbox",
-                "platform": "PC",
-                "rating": "E"
-            }
-        ]
-    }
+	"team": {
+		"_id": "66e2348f1f24fbf46aa4e3d7",
+		"name": "Red Bull Racing",
+		"teamColour": "#FF0000",
+		"teamLogoUrl": "/static/teams/Red Bull Racing.png",
+		"drivers": [
+			{
+				"name": "Max VERSTAPPEN",
+				"nationality": "NED",
+				"number": 1,
+				"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/1col/image.png",
+				"flagUrl": "/static/flags/NED.jpg",
+				"_id": "66e2348f1f24fbf46aa4e3d8"
+			},
+			{
+				"name": "Sergio PEREZ",
+				"nationality": "MEX",
+				"number": 11,
+				"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/S/SERPER01_Sergio_Perez/serper01.png.transform/1col/image.png",
+				"flagUrl": "/static/flags/MEX.jpg",
+				"_id": "66e2348f1f24fbf46aa4e3d9"
+			}
+		],
+		"__v": 0
+	}
 }
 ```
 
 ##### Não Encontrado! 404
-Caso essa resposta aconteça, significa que o jogo com o ID fornecido não foi encontrado.
+Caso essa resposta aconteça, significa que o a equipe com o ID fornecido não foi encontrado.
 
 Exemplo de resposta:
 
 ```
 {
-    "err": "Jogo não encontrado!"
+    "error": "Equipe não encontrada."
 }
 ```
 
-##### Requisição Inválida! 400
-Caso essa resposta aconteça, significa que o ID fornecido é inválido.
-
-Exemplo de resposta:
-
-```
-{
-    "err": "ID inválido!"
-}
-```
-
-##### Erro Interno do Servidor! 500
+##### Internal Server Error 500
 Caso essa resposta aconteça, significa que ocorreu um erro interno no servidor.
 
 Exemplo de resposta:
 
 ```
 {
-    "err": "Erro interno do servidor!"
+    "error": "Erro interno do servidor."
 }
 ```
