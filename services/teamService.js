@@ -19,20 +19,20 @@ const fetchAndUpdateTeamByName = async (teamName) => {
     // Pega a cor da equipe do primeiro piloto (todos os pilotos têm a mesma cor de equipe)
     const teamColour = `#${driversData[0].team_colour}`;
 
-    // Caminho da logo da equipe
-    const teamLogoUrl = `/static/teams/${teamName}.png`;  // Logo da equipe
+    // Nome do arquivo da logo da equipe
+    const teamLogoFileName = `${teamName}.png`;  // Nome do arquivo, deve estar na pasta 'public/teams/'
 
     // Mapeia os dados dos pilotos para o formato desejado
     const updatedDrivers = driversData.map(driver => {
-      const flagUrl = `/static/flags/${driver.country_code}.jpg`;  // Bandeira do piloto com extensão .jpg
-      console.log(`Flag URL: ${flagUrl}`);  // Adiciona log para depuração
+      const flagFileName = `${driver.country_code}.jpg`;  // Nome do arquivo da bandeira, deve estar na pasta 'public/flags/'
+      console.log(`Flag File Name: ${flagFileName}`);  // Adiciona log para depuração
 
       return {
         name: driver.full_name,
         nationality: driver.country_code,
         number: driver.driver_number,
         headshotUrl: driver.headshot_url,
-        flagUrl: flagUrl,
+        flagUrl: flagFileName,
       };
     });
 
@@ -40,15 +40,15 @@ const fetchAndUpdateTeamByName = async (teamName) => {
     let team = await Team.findOne({ name: teamName });
     if (team) {
       team.drivers = updatedDrivers;
-      team.teamLogoUrl = teamLogoUrl;
+      team.teamLogoUrl = teamLogoFileName;
       team.teamColour = teamColour;
       await team.save();
       console.log(`Equipe ${teamName} atualizada.`);
     } else {
       team = new Team({
         name: teamName,
-        teamLogoUrl: teamLogoUrl,  // Adiciona a logo da equipe
-        teamColour: teamColour,    // Adiciona a cor da equipe
+        teamLogoUrl: teamLogoFileName,  // Adiciona a logo da equipe
+        teamColour: teamColour,        // Adiciona a cor da equipe
         drivers: updatedDrivers,
       });
       await team.save();
