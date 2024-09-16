@@ -16,9 +16,13 @@ const fetchAndUpdateTeamByName = async (teamName) => {
       throw new Error("Pilotos não encontrados na API.");
     }
 
-    // Caminho das logos e bandeiras
+    // Pega a cor da equipe do primeiro piloto (todos os pilotos têm a mesma cor de equipe)
+    const teamColour = `#${driversData[0].team_colour}`;
+
+    // Caminho da logo da equipe
     const teamLogoUrl = `/static/teams/${teamName}.png`;  // Logo da equipe
-    const teamColour = "#FF0000"; // Defina a cor da equipe conforme necessário
+
+    // Mapeia os dados dos pilotos para o formato desejado
     const updatedDrivers = driversData.map(driver => {
       const flagUrl = `/static/flags/${driver.country_code}.jpg`;  // Bandeira do piloto com extensão .jpg
       console.log(`Flag URL: ${flagUrl}`);  // Adiciona log para depuração
@@ -32,7 +36,7 @@ const fetchAndUpdateTeamByName = async (teamName) => {
       };
     });
 
-    // Cria ou atualiza a equipe com os dados dos pilotos e a logo da scuderia
+    // Cria ou atualiza a equipe com os dados dos pilotos, cor e logo
     let team = await Team.findOne({ name: teamName });
     if (team) {
       team.drivers = updatedDrivers;
