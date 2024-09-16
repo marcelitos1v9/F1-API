@@ -21,26 +21,76 @@ Exemplo de resposta:
 {
 	"teams": [
 		{
-			"_id": "66dfa97b3553a3e422997a93",
+			"_id": "66e79c1ba095f6f0f9edf029",
+			"name": "McLaren",
+			"teamColour": "#F58020",
+			"teamLogoUrl": "McLaren.png",
+			"drivers": [
+				{
+					"name": "Lando NORRIS",
+					"nationality": "GBR",
+					"number": 4,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/L/LANNOR01_Lando_Norris/lannor01.png.transform/1col/image.png",
+					"flagUrl": "GBR.jpg",
+					"_id": "66e79c1ba095f6f0f9edf02a"
+				},
+				{
+					"name": "Oscar PIASTRI",
+					"nationality": "AUS",
+					"number": 81,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/O/OSCPIA01_Oscar_Piastri/oscpia01.png.transform/1col/image.png",
+					"flagUrl": "AUS.jpg",
+					"_id": "66e79c1ba095f6f0f9edf02b"
+				}
+			],
+			"__v": 0
+		},
+		{
+			"_id": "66e79c20a095f6f0f9edf03e",
 			"name": "Mercedes",
-			"teamColour": "#FF0000",
-			"teamLogoUrl": "/static/teams/Mercedes.png",
+			"teamColour": "#6CD3BF",
+			"teamLogoUrl": "Mercedes.png",
 			"drivers": [
 				{
 					"name": "Lewis HAMILTON",
 					"nationality": "GBR",
 					"number": 44,
 					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/1col/image.png",
-					"flagUrl": "/static/flags/GBR.jpg",
-					"_id": "66dfa97b3553a3e422997a94"
+					"flagUrl": "GBR.jpg",
+					"_id": "66e79c20a095f6f0f9edf03f"
 				},
 				{
 					"name": "George RUSSELL",
 					"nationality": "GBR",
 					"number": 63,
 					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/G/GEORUS01_George_Russell/georus01.png.transform/1col/image.png",
-					"flagUrl": "/static/flags/GBR.jpg",
-					"_id": "66dfa97b3553a3e422997a95"
+					"flagUrl": "GBR.jpg",
+					"_id": "66e79c20a095f6f0f9edf040"
+				}
+			],
+			"__v": 0
+		},
+		{
+			"_id": "66e79c27a095f6f0f9edf055",
+			"name": "Red Bull Racing",
+			"teamColour": "#3671C6",
+			"teamLogoUrl": "Red Bull Racing.png",
+			"drivers": [
+				{
+					"name": "Max VERSTAPPEN",
+					"nationality": "NED",
+					"number": 1,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/1col/image.png",
+					"flagUrl": "NED.jpg",
+					"_id": "66e79c27a095f6f0f9edf056"
+				},
+				{
+					"name": "Sergio PEREZ",
+					"nationality": "MEX",
+					"number": 11,
+					"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/S/SERPER01_Sergio_Perez/serper01.png.transform/1col/image.png",
+					"flagUrl": "MEX.jpg",
+					"_id": "66e79c27a095f6f0f9edf057"
 				}
 			],
 			"__v": 0
@@ -148,31 +198,29 @@ Exemplo de resposta:
 ```
 {
 	"team": {
-		"_id": "66e2348f1f24fbf46aa4e3d7",
+		"_id": "66e79c27a095f6f0f9edf055",
 		"name": "Red Bull Racing",
-		"teamColour": "#1E41FF",
-		"teamLogoUrl": "/static/teams/Red Bull Racing.png",
+		"teamColour": "#3671C6",
+		"teamLogoUrl": "Red Bull Racing.png",
 		"drivers": [
 			{
 				"name": "Max VERSTAPPEN",
 				"nationality": "NED",
 				"number": 1,
 				"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/1col/image.png",
-				"flagUrl": "/static/flags/NED.jpg",
-				"_id": "66e2348f1f24fbf46aa4e3d8"
+				"flagUrl": "NED.jpg",
+				"_id": "66e79c27a095f6f0f9edf056"
 			},
 			{
 				"name": "Sergio PEREZ",
 				"nationality": "MEX",
 				"number": 11,
 				"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/S/SERPER01_Sergio_Perez/serper01.png.transform/1col/image.png",
-				"flagUrl": "/static/flags/MEX.jpg",
-				"_id": "66e2348f1f24fbf46aa4e3d9"
+				"flagUrl": "MEX.jpg",
+				"_id": "66e79c27a095f6f0f9edf057"
 			}
 		],
-		"__v": 0,
-		"base": "Milton Keynes",
-		"foundationYear": 2005
+		"__v": 0
 	}
 }
 ```
@@ -214,26 +262,26 @@ Exemplo de resposta:
 ```
 {
 	"team": {
-		"_id": "66e2348f1f24fbf46aa4e3d7",
+		"_id": "66e79c27a095f6f0f9edf055",
 		"name": "Red Bull Racing",
-		"teamColour": "#FF0000",
-		"teamLogoUrl": "/static/teams/Red Bull Racing.png",
+		"teamColour": "#3671C6",
+		"teamLogoUrl": "Red Bull Racing.png",
 		"drivers": [
 			{
 				"name": "Max VERSTAPPEN",
 				"nationality": "NED",
 				"number": 1,
 				"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/1col/image.png",
-				"flagUrl": "/static/flags/NED.jpg",
-				"_id": "66e2348f1f24fbf46aa4e3d8"
+				"flagUrl": "NED.jpg",
+				"_id": "66e79c27a095f6f0f9edf056"
 			},
 			{
 				"name": "Sergio PEREZ",
 				"nationality": "MEX",
 				"number": 11,
 				"headshotUrl": "https://www.formula1.com/content/dam/fom-website/drivers/S/SERPER01_Sergio_Perez/serper01.png.transform/1col/image.png",
-				"flagUrl": "/static/flags/MEX.jpg",
-				"_id": "66e2348f1f24fbf46aa4e3d9"
+				"flagUrl": "MEX.jpg",
+				"_id": "66e79c27a095f6f0f9edf057"
 			}
 		],
 		"__v": 0
