@@ -1,8 +1,26 @@
-# Documentação API.
+# API F1 
 ![NPM](https://img.shields.io/npm/l/react)
 
-# API F1
-Esta API sobre Fórmula 1 é utilizada para gerenciar informações das equipes de corridas.
+
+## Esta API sobre Fórmula 1 é utilizada para gerenciar informações das equipes de corridas.
+
+<img src="./imgs/apif1.svg">
+
+<br>
+
+# Tecnologias Essenciais
+  <img align="center" alt="Js" height="70" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg">
+ <img align="center" alt="Js" height="70" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg">
+   <img align="center" alt="Js" height="70" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+	 <img align="center" alt="Js" height="70" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg">
+    <img align="center" alt="Js" height="70" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> 
+
+<br>
+
+# API EXTERNA
+Estamos consumindo uma API externa para tratamento dos dados chamada <b>OpenF1</b>
+
+<img align="center" alt="Js" height="100" width="auto" src="./imgs/logoapif1.png"> 
 
 ## Endpoints
 ### - GET /teams
