@@ -14,7 +14,10 @@ router.delete("/team/:id", teamController.deleteTeam);
 // Endpoint para alterar uma equipe
 router.put("/team/:id", teamController.updateTeam);
 
-// Endpoint para listar uma única equipe
+// Endpoint para listar uma única equipe por ID
 router.get("/team/:id", teamController.getOneTeam);
+
+// Endpoint para listar uma única equipe por nome
+router.get("/team/name/:name", teamController.getOneTeamByName);
 
 export default router;

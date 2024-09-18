@@ -84,4 +84,21 @@ const getOneTeam = async (req, res) => {
   }
 };
 
-export default { getAllTeams, createOrUpdateTeamByName, deleteTeam, updateTeam, getOneTeam };
+export const getOneTeamByName = async (req, res) => {
+  try {
+    const { name } = req.params; // Pega o nome da equipe da URL
+    const team = await Team.findOne({ name: name }); // Busca a equipe pelo nome no banco de dados
+
+    if (!team) {
+      return res.status(404).json({ error: "Equipe não encontrada." });
+    }
+
+    res.status(200).json({ team });
+  } catch (error) {
+    console.error("Erro ao buscar a equipe:", error);
+    res.status(500).json({ error: "Erro interno no servidor." });
+  }
+};
+
+
+export default { getAllTeams, createOrUpdateTeamByName, deleteTeam, updateTeam, getOneTeam, getOneTeamByName };
