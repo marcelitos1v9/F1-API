@@ -66,7 +66,7 @@ const updateTeam = async (req, res) => {
   } catch (error) {
     console.error("Erro ao atualizar a equipe:", error);
     res.status(500).json({ error: "Erro interno no servidor." });
-  }
+  } 
 };
 
 // Função para listar uma única equipe
@@ -84,6 +84,7 @@ const getOneTeam = async (req, res) => {
   }
 };
 
+// Função para listar uma única equipe pelo nome
 export const getOneTeamByName = async (req, res) => {
   try {
     const { name } = req.params; // Pega o nome da equipe da URL
