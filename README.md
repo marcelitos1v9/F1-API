@@ -9,18 +9,21 @@
 <br>
 
 # Tecnologias Essenciais
-  <img align="center" alt="Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg">
- <img align="center" alt="Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg">
-   <img align="center" alt="Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-	 <img align="center" alt="Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg">
-    <img align="center" alt="Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> 
+<img align="center" alt="Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg">
+<img align="center" alt="Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg">
+<img align="center" alt="Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+<img align="center" alt="Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg">
+<img align="center" alt="Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> 
 
 <br>
 
 # API EXTERNA
 Estamos consumindo uma API externa para tratamento dos dados chamada <b>OpenF1</b>
 
-<img align="center" alt="Js" height="100" width="auto" src="./imgs/logoapif1.png"> 
+<img align="center" alt="" height="auto" width="50%" src="./imgs/logoapif1.png"> 
+
+
+Para saber mais acesse <a style=""><b>OpenF1</b></a>
 
 <br>
 
@@ -379,5 +382,5 @@ export const getOneTeamByName = async (req, res) => {
 *OBS: Os códigos presentes na documentação não estão 100% completos, clone o repositório e consulte o código bruto*
 
 <br>
-<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXNpenQycmF2bndqeHJ5b2dmcGEydHM1N3g1Zm51bHdnMnJleGFuaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UzvlLpSulVBn7ZIucS/giphy.webp">
+<img width="100%" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXNpenQycmF2bndqeHJ5b2dmcGEydHM1N3g1Zm51bHdnMnJleGFuaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UzvlLpSulVBn7ZIucS/giphy.webp">
 
