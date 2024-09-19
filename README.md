@@ -23,8 +23,20 @@ Estamos consumindo uma API externa para tratamento dos dados chamada <b>OpenF1</
 
 <img align="center" alt="" height="auto" width="50%" src="./imgs/logoapif1.png"> 
 
+Para saber mais acesse <a href="https://openf1.org/" target="_blank" style=""><b>OpenF1</b></a> <- clicando aqui
 
-Para saber mais acesse <a style=""><b>OpenF1</b></a>
+<br>
+
+## Como os dados estão presentes na OPENF1
+- Dentro desta api, o JSON lista as informações dos corredores
+
+<img src="./imgs/json_openf1.svg">
+
+<br>
+
+- Na nossa API fazemos uma requisição pegando esse JSON, puxamos o nome das equipes dos corredores, e tratamos os dados criando uma listagem por equipes com os corredores dentro de um documento aninhado.
+
+<img src="./imgs/apif1_json.png">
 
 <br>
 
